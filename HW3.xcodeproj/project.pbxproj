@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A81B59B52255C97F006ED286 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81B59B42255C97F006ED286 /* Data.swift */; };
+		A81B59B52255C97F006ED286 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81B59B42255C97F006ED286 /* DataManager.swift */; };
 		A89623DA229FA31B001FDBB4 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89623D9229FA31B001FDBB4 /* HeaderCell.swift */; };
 		A89623DC229FA388001FDBB4 /* SectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89623DB229FA388001FDBB4 /* SectionTableViewController.swift */; };
 		A8B9EB6A20D666850049A33C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9EB6920D666850049A33C /* AppDelegate.swift */; };
@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A81B59B42255C97F006ED286 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		A81B59B42255C97F006ED286 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A89623D9229FA31B001FDBB4 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		A89623DB229FA388001FDBB4 /* SectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewController.swift; sourceTree = "<group>"; };
 		A8B9EB6620D666850049A33C /* HW3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +70,7 @@
 				A8B9EB8120D6948D0049A33C /* DetailViewController.swift */,
 				A89623D9229FA31B001FDBB4 /* HeaderCell.swift */,
 				A8B9EB7B20D666CF0049A33C /* Person.swift */,
-				A81B59B42255C97F006ED286 /* Data.swift */,
+				A81B59B42255C97F006ED286 /* DataManager.swift */,
 				A8B9EB6D20D666850049A33C /* Main.storyboard */,
 				A8B9EB7020D666850049A33C /* Assets.xcassets */,
 				A8B9EB7220D666850049A33C /* LaunchScreen.storyboard */,
@@ -152,7 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8B9EB7C20D666CF0049A33C /* Person.swift in Sources */,
-				A81B59B52255C97F006ED286 /* Data.swift in Sources */,
+				A81B59B52255C97F006ED286 /* DataManager.swift in Sources */,
 				A8B9EB7E20D668B80049A33C /* TableViewController.swift in Sources */,
 				A89623DA229FA31B001FDBB4 /* HeaderCell.swift in Sources */,
 				A89623DC229FA388001FDBB4 /* SectionTableViewController.swift in Sources */,

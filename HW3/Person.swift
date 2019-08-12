@@ -19,10 +19,10 @@ struct Person {
         
         var persons: [Person] = []
         
-        names.shuffle()
-        surnames.shuffle()
-        emails.shuffle()
-        phones.shuffle()
+        let names = DataManager.shared.names.shuffled()
+        let surnames = DataManager.shared.surnames.shuffled()
+        let emails = DataManager.shared.emails.shuffled()
+        let phones = DataManager.shared.phones.shuffled()
         
         for index in 0..<names.count {
             let person = Person(name: names[index],
