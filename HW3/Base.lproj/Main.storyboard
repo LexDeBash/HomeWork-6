@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f1J-1g-x94">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fyf-Q4-7DY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Persons List-->
+        <!--Item-->
         <scene sceneID="PgV-Oy-DNz">
             <objects>
                 <tableViewController id="Z9z-OF-Djp" customClass="TableViewController" customModule="HW3" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,13 +35,14 @@
                             <outlet property="delegate" destination="Z9z-OF-Djp" id="Koz-uT-RKB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Persons List" id="aKU-BT-Bbi"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="bYE-d4-2qn"/>
+                    <navigationItem key="navigationItem" id="aKU-BT-Bbi"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWc-Qb-3qD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1360.8" y="112.89355322338831"/>
         </scene>
-        <!--Test-->
+        <!--Detail View Controller-->
         <scene sceneID="pSQ-DI-5dI">
             <objects>
                 <viewController id="Ehk-gB-jFn" customClass="DetailViewController" customModule="HW3" customModuleProvider="target" sceneMemberID="viewController">
@@ -73,7 +74,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EzB-QJ-WKt"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Test" id="o5M-Pd-djR"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="o5M-Pd-djR"/>
                     <connections>
                         <outlet property="emailLabel" destination="dm0-0y-RBA" id="7ua-gt-Qbr"/>
                         <outlet property="phoneNumberLabel" destination="Itg-of-aBK" id="w8Y-Da-hSQ"/>
@@ -83,40 +84,41 @@
             </objects>
             <point key="canvasLocation" x="2127.1999999999998" y="112.89355322338831"/>
         </scene>
-        <!--Detail-->
-        <scene sceneID="oOj-nd-H07">
+        <!--Navigation Controller-->
+        <scene sceneID="4qP-Ez-9fe">
             <objects>
-                <navigationController id="iR6-6F-KDj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Detail" id="PUM-Mr-OV7"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EqR-h8-uSk">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                <navigationController id="fyf-Q4-7DY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="dQ9-3G-uUD">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Z9z-OF-Djp" kind="relationship" relationship="rootViewController" id="B1t-RE-6pM"/>
+                        <segue destination="f1J-1g-x94" kind="relationship" relationship="rootViewController" id="gLp-4Y-8xI"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hGY-9G-o5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ht-MQ-oU2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="623.20000000000005" y="112.89355322338831"/>
+            <point key="canvasLocation" x="-418" y="455"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Persons List-->
         <scene sceneID="qdq-WZ-POJ">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="f1J-1g-x94" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Persons List" id="juu-AX-SAL"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cgg-UM-z9t">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="iR6-6F-KDj" kind="relationship" relationship="viewControllers" id="bZb-0s-fGb"/>
-                        <segue destination="q48-TT-swh" kind="relationship" relationship="viewControllers" id="dFl-pE-nT8"/>
+                        <segue destination="Z9z-OF-Djp" kind="relationship" relationship="viewControllers" id="sol-qc-d1r"/>
+                        <segue destination="nV5-xu-8jc" kind="relationship" relationship="viewControllers" id="3d4-3g-XdJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tmj-PO-cLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-190" y="456"/>
+            <point key="canvasLocation" x="356" y="455"/>
         </scene>
         <!--Persons List-->
         <scene sceneID="gaD-NV-NKa">
@@ -165,28 +167,12 @@
                             <outlet property="delegate" destination="nV5-xu-8jc" id="pcR-jf-JFe"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="7NP-1u-dox"/>
                     <navigationItem key="navigationItem" title="Persons List" id="5PQ-VX-ihj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSB-8M-Kat" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1361" y="798"/>
-        </scene>
-        <!--Sections-->
-        <scene sceneID="iTy-LY-AK5">
-            <objects>
-                <navigationController id="q48-TT-swh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sections" id="MKk-b9-azm"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ai4-5c-FEQ">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="nV5-xu-8jc" kind="relationship" relationship="rootViewController" id="rM4-kq-wSP"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rRE-kN-h7j" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="623" y="797"/>
         </scene>
     </scenes>
 </document>
