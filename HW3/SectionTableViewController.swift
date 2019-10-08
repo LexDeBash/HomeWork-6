@@ -10,7 +10,7 @@ import UIKit
 
 class SectionTableViewController: UITableViewController {
     
-    var persons = Person.createPersons()
+    var persons = Person.getContactList()
     
     // MARK: - Table view data source
     
@@ -20,9 +20,7 @@ class SectionTableViewController: UITableViewController {
     
     //Использование метода для присваивания заголовка секции
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let person = persons[section]
-        
-        return person.name + " " + person.sureName
+        persons[section].fullName
     }
     
     
@@ -31,8 +29,7 @@ class SectionTableViewController: UITableViewController {
      override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
      let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell") as! HeaderCell
      
-     let person = persons[section]
-     headerCell.personLabel.text = person.name + " " + person.sureName
+     headerCell.personLabel.text = persons[section].fullName
      
      return headerCell
      
@@ -42,12 +39,10 @@ class SectionTableViewController: UITableViewController {
     /*
     // Использование метода для кастомизации секции без использования кастомного класса
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        let person = persons[section]
-        
+                
         let label = UILabel()
         label.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-        label.text = person.name + " " + person.sureName
+        label.text = persons[section].fullName
         label.textColor = .white
         //        label.textAlignment = .center
         //        label.font = UIFont.boldSystemFont(ofSize: 24)
@@ -59,14 +54,12 @@ class SectionTableViewController: UITableViewController {
     /*
      // Использование метода для кастомизации секции без использования кастомного класса
      override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-     
-     let person = persons[section]
-     
+          
      let myView = UIView()
      myView.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
      
      let label = UILabel(frame: CGRect(x: 20, y: 3, width: 300, height: 20))
-     label.text = person.name + " " + person.sureName
+     label.text = persons[section].fullName
      label.textColor = .white
      
      myView.addSubview(label)
@@ -75,7 +68,7 @@ class SectionTableViewController: UITableViewController {
      */
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        2
     }
     
     

@@ -11,11 +11,15 @@ import Foundation
 struct Person {
     
     var name: String
-    var sureName: String
+    var surname: String
     var email: String
     var phoneNumber: String
     
-    static func createPersons() -> [Person] {
+    var fullName: String {
+        "\(name) \(surname)"
+    }
+    
+    static func getContactList() -> [Person] {
         
         var persons: [Person] = []
         
@@ -26,7 +30,7 @@ struct Person {
         
         for index in 0..<names.count {
             let person = Person(name: names[index],
-                                sureName: surnames[index],
+                                surname: surnames[index],
                                 email: emails[index],
                                 phoneNumber: phones[index])
             
