@@ -10,10 +10,10 @@ import Foundation
 
 struct Person {
     
-    var name: String
-    var surname: String
-    var email: String
-    var phoneNumber: String
+    let name: String
+    let surname: String
+    let email: String
+    let phoneNumber: String
     
     var fullName: String {
         "\(name) \(surname)"
