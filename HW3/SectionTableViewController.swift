@@ -41,7 +41,6 @@ class SectionTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
                 
         let label = UILabel()
-        label.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         label.text = persons[section].fullName
         label.textColor = .white
         //        label.textAlignment = .center
@@ -52,20 +51,25 @@ class SectionTableViewController: UITableViewController {
     */
     
     /*
-     // Использование метода для кастомизации секции без использования кастомного класса
-     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-          
-     let myView = UIView()
-     myView.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-     
-     let label = UILabel(frame: CGRect(x: 20, y: 3, width: 300, height: 20))
-     label.text = persons[section].fullName
-     label.textColor = .white
-     
-     myView.addSubview(label)
-     return myView
-     }
-     */
+    // Использование метода для кастомизации секции без использования кастомного класса
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let headerView = UIView()
+        
+        let label = UILabel(frame: CGRect(x: 20, y: 3, width: 300, height: 20))
+        label.text = persons[section].fullName
+        label.textColor = .white
+        
+        headerView.addSubview(label)
+        return headerView
+    }
+    */
+    
+    /*
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.backgroundColor = .gray
+    }
+    */
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         2
@@ -79,6 +83,17 @@ class SectionTableViewController: UITableViewController {
         let person = persons[indexPath.section]
         cell.textLabel?.text = indexPath.row == 0 ? person.email : person.phoneNumber
         
+        /*
+        switch indexPath.row {
+        case 0:
+            cell.textLabel?.text = person.phoneNumber
+            cell.imageView?.image = UIImage(systemName: Contacts.phone.rawValue)
+        default:
+            cell.textLabel?.text = person.email
+            cell.imageView?.image = UIImage(systemName: Contacts.email.rawValue)
+        }
+        */
+                
         return cell
     }
 }

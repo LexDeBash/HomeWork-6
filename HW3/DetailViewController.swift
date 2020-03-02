@@ -10,10 +10,10 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    var person: Person!
-
     @IBOutlet var emailLabel: UILabel!
     @IBOutlet var phoneNumberLabel: UILabel!
+    
+    var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
