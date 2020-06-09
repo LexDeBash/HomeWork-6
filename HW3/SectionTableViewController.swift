@@ -10,7 +10,7 @@ import UIKit
 
 class SectionTableViewController: UITableViewController {
     
-    var persons = Person.getContactList()
+    var persons: [Person] = []
     
     // MARK: - Table view data source
     
@@ -81,9 +81,7 @@ class SectionTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         let person = persons[indexPath.section]
-        cell.textLabel?.text = indexPath.row == 0 ? person.email : person.phoneNumber
         
-        /*
         switch indexPath.row {
         case 0:
             cell.textLabel?.text = person.phoneNumber
@@ -92,7 +90,6 @@ class SectionTableViewController: UITableViewController {
             cell.textLabel?.text = person.email
             cell.imageView?.image = UIImage(systemName: Contacts.email.rawValue)
         }
-        */
                 
         return cell
     }

@@ -12,6 +12,8 @@ class DataManager {
     
     static let shared = DataManager()
     
+    private init() {}
+    
     var names = ["John", "Aaron", "Tim", "Ted",
                  "Steven", "Sharon", "Nicola",
                  "Allan", "Bruce", "Carl"]

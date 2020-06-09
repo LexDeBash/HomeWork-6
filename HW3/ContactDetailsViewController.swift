@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  ContactDetailsViewController.swift
 //  HW3
 //
 //  Created by Alexey Efimov on 17.06.2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class ContactDetailsViewController: UIViewController {
     
     @IBOutlet var emailLabel: UILabel!
     @IBOutlet var phoneNumberLabel: UILabel!

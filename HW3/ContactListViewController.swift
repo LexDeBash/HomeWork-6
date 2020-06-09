@@ -1,5 +1,5 @@
 //
-//  TableViewController.swift
+//  ContactListViewController.swift
 //  HW3
 //
 //  Created by Alexey Efimov on 17.06.2018.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class ContactListViewController: UITableViewController {
     
-    let persons = Person.getContactList()
+    var persons: [Person] = []
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,7 +30,7 @@ class TableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "Detail" else { return }
         if let indexPath = tableView.indexPathForSelectedRow {
-            let detailVC = segue.destination as! DetailViewController
+            let detailVC = segue.destination as! ContactDetailsViewController
             detailVC.person = persons[indexPath.row]
         }
     }
