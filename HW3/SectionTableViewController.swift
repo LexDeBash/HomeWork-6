@@ -15,7 +15,7 @@ class SectionTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return persons.count
+        persons.count
     }
     
     //Использование метода для присваивания заголовка секции
@@ -25,17 +25,17 @@ class SectionTableViewController: UITableViewController {
     
     
     /*
-     // Использование метода для кастомизации секции с использованием кастомного класса
-     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-     let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell") as! HeaderCell
-     
-     headerCell.personLabel.text = persons[section].fullName
-     
-     return headerCell
-     
-     }
-     */
+    // Использование метода для кастомизации секции с использованием кастомного класса
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell") as! HeaderCell
+        
+        headerCell.personLabel.text = persons[section].fullName
+        
+        return headerCell
+        
+    }
     
+    */
     /*
     // Использование метода для кастомизации секции без использования кастомного класса
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

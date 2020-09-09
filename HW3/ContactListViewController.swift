@@ -14,7 +14,7 @@ class ContactListViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return persons.count
+        persons.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -28,7 +28,6 @@ class ContactListViewController: UITableViewController {
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "Detail" else { return }
         if let indexPath = tableView.indexPathForSelectedRow {
             let detailVC = segue.destination as! ContactDetailsViewController
             detailVC.person = persons[indexPath.row]
