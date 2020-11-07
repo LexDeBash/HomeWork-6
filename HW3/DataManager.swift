@@ -12,8 +12,6 @@ class DataManager {
     
     static let shared = DataManager()
     
-    private init() {}
-    
     let names = [
         "John", "Aaron", "Tim", "Ted",
         "Steven", "Sharon", "Nicola",
@@ -38,4 +36,6 @@ class DataManager {
         "562880225", "738594072", "825654134", "645898473",
         "432349845", "459477625"
     ]
+    
+    private init() {}
 }

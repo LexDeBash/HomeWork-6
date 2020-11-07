@@ -81,15 +81,18 @@ class SectionTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         let person = persons[indexPath.section]
+        var content = cell.defaultContentConfiguration()
         
         switch indexPath.row {
         case 0:
-            cell.textLabel?.text = person.phoneNumber
-            cell.imageView?.image = UIImage(systemName: Contacts.phone.rawValue)
+            content.text = person.phoneNumber
+            content.image = UIImage(systemName: Contacts.phone.rawValue)
         default:
-            cell.textLabel?.text = person.email
-            cell.imageView?.image = UIImage(systemName: Contacts.email.rawValue)
+            content.text = person.email
+            content.image = UIImage(systemName: Contacts.email.rawValue)
         }
+        
+        cell.contentConfiguration = content
                 
         return cell
     }
